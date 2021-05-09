@@ -1,16 +1,16 @@
 Package.describe({
-  name: 'iron:router',
-  summary: 'Routing specifically designed for Meteor',
-  version: '1.1.2',
-  git: 'https://github.com/iron-meteor/iron-router'
+  name: 'meteorhubdotnet:firestorm-iron-router',
+  summary: 'Fork of Iron Router for Firestorm',
+  version: '1.0.0',
+  git: 'https://github.com/meteorhubdotnet/firestorm-iron-router'
 });
 
 Npm.depends({
-  'body-parser': '1.12.4'
+  'body-parser': '1.19.0'
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@2.2');
   // meteor dependencies
   api.use('underscore');
   api.use('webapp', 'server');
@@ -25,23 +25,23 @@ Package.on_use(function (api) {
   api.use('meteor');
 
   // main namespace and utils
-  api.use('iron:core@1.0.11');
-  api.imply('iron:core');
+  api.use('meteorhubdotnet:iron-core@1.0.11');
+  api.imply('meteorhubdotnet:iron-core');
 
   // ui layout
-  api.use('iron:layout@1.0.12');
+  api.use('meteorhubdotnet:iron-layout@1.0.12');
 
   // connect like middleware stack for client/server
-  api.use('iron:middleware-stack@1.1.0');
+  api.use('meteorhubdotnet:iron-middleware-stack@1.1.0');
 
   // client and server side url utilities and compiling
-  api.use('iron:url@1.1.0');
+  api.use('meteorhubdotnet:iron-url@1.1.0');
 
   // for reactive urls and pushState in the browser
-  api.use('iron:location@1.0.11');
+  api.use('meteorhubdotnet:iron-location@1.0.11');
 
   // for RouteController which inherits from this
-  api.use('iron:controller@1.0.12');
+  api.use('meteorhubdotnet:iron-controller@1.0.12');
 
   api.add_files('lib/current_options.js');
   api.add_files('lib/http_methods.js');
@@ -65,7 +65,7 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use('iron:router');
+  api.use('meteorhubdotnet:iron-router');
   api.use('tinytest');
   api.use('test-helpers');
 
