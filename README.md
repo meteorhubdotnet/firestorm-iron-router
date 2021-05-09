@@ -1,4 +1,4 @@
-# meteorhubdotnet:iron-router
+# meteorhubdotnet:firestorm-iron-router
 
 Fork of [Iron Router](https://iron-meteor.github.io/iron-router/) for
 the [Firestorm project](https://github.com/meteorhubdotnet/firestorm).
