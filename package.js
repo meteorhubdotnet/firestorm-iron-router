@@ -15,8 +15,8 @@ Package.on_use(function (api) {
   api.use('underscore');
   api.use('webapp', 'server');
   api.use('deps', 'client');
-  api.use('ui');
-  api.use('templating');
+  api.use('ui@1.0.13');
+  api.use('templating@1.4.0');
 
   // for cloning
   api.use('ejson');
@@ -25,23 +25,23 @@ Package.on_use(function (api) {
   api.use('meteor');
 
   // main namespace and utils
-  api.use('meteorhubdotnet:firestorm-iron-core');
-  api.imply('meteorhubdotnet:firestorm-iron-core');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.1');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.1');
 
   // ui layout
-  api.use('meteorhubdotnet:firestorm-iron-layout');
+  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.1');
 
   // connect like middleware stack for client/server
-  api.use('meteorhubdotnet:firestorm-iron-middleware-stack');
+  api.use('meteorhubdotnet:firestorm-iron-middleware-stack@1.0.1');
 
   // client and server side url utilities and compiling
-  api.use('meteorhubdotnet:firestorm-iron-url');
+  api.use('meteorhubdotnet:firestorm-iron-url@1.0.1');
 
   // for reactive urls and pushState in the browser
-  api.use('meteorhubdotnet:firestorm-iron-location');
+  api.use('meteorhubdotnet:firestorm-iron-location@1.0.1');
 
   // for RouteController which inherits from this
-  api.use('meteorhubdotnet:firestorm-iron-controller');
+  api.use('meteorhubdotnet:firestorm-iron-controller@1.0.1');
 
   api.add_files('lib/current_options.js');
   api.add_files('lib/http_methods.js');
