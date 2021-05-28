@@ -1,7 +1,7 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-router',
   summary: 'Fork of Iron Router for Firestorm',
-  version: '1.0.4',
+  version: '1.0.5',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-router'
 });
 
