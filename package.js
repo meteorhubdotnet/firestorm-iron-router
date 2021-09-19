@@ -1,7 +1,7 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-router',
   summary: 'Fork of Iron Router for Firestorm',
-  version: '1.0.5',
+  version: '1.0.6',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-router'
 });
 
@@ -13,8 +13,8 @@ Package.onUse(function (api) {
   api.versionsFrom('METEOR@2.3.6');
   // meteor dependencies
   api.use('underscore');
-  api.use('webapp', 'server');
-  api.use('deps', 'client');
+  api.use('webapp@1.11.1', 'server');
+  api.use('deps@1.0.12', 'client');
   api.use('ui@1.0.13');
   api.use('templating@1.4.0');
 
@@ -65,7 +65,7 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
-  api.use('meteorhubdotnet:firestorm-iron-router');
+  api.use('meteorhubdotnet:firestorm-iron-router@1.0.5');
   api.use('tinytest');
   api.use('test-helpers');
 
