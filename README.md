@@ -7,3 +7,9 @@ If you are NOT using Firestorm, it is STRONGLY RECOMMENDED to use the
 official Iron Router package:
 
 [https://iron-meteor.github.io/iron-router/](https://iron-meteor.github.io/iron-router/)
+
+
+# Updating to 1.0.13
+
+* Run `meteor update`
+* Run `meteor add blaze-html-templates@2.0.0`
