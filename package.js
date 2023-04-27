@@ -1,7 +1,7 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-router',
   summary: 'Fork of Iron Router for Firestorm',
-  version: '1.0.10',
+  version: '1.0.15',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-router'
 });
 
@@ -10,12 +10,12 @@ Npm.depends({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@2.7.3');
+  api.versionsFrom('METEOR@2.11.0');
   // meteor dependencies
-  api.use('underscore');
-  api.use('webapp@1.13.1', 'server');
-  api.use('tracker', 'client');
-  api.use('blaze@2.6.1');
+  api.use('underscore@1.0.12');
+  api.use('webapp@1.13.4', 'server');
+  api.use('tracker@1.3.1', 'client');
+  api.use('blaze@2.6.2');
   api.use('templating@1.4.2');
 
   // for cloning
@@ -25,23 +25,23 @@ Package.onUse(function (api) {
   api.use('meteor');
 
   // main namespace and utils
-  api.use('meteorhubdotnet:firestorm-iron-core@1.0.10');
-  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.15');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.15');
 
   // ui layout
-  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.15');
 
   // connect like middleware stack for client/server
-  api.use('meteorhubdotnet:firestorm-iron-middleware-stack@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-middleware-stack@1.0.15');
 
   // client and server side url utilities and compiling
-  api.use('meteorhubdotnet:firestorm-iron-url@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-url@1.0.15');
 
   // for reactive urls and pushState in the browser
-  api.use('meteorhubdotnet:firestorm-iron-location@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-location@1.0.15');
 
   // for RouteController which inherits from this
-  api.use('meteorhubdotnet:firestorm-iron-controller@1.0.10');
+  api.use('meteorhubdotnet:firestorm-iron-controller@1.0.15');
 
   api.addFiles('lib/current_options.js');
   api.addFiles('lib/http_methods.js');
@@ -64,13 +64,3 @@ Package.onUse(function (api) {
   api.export('RouteController');
 });
 
-Package.onTest(function (api) {
-  api.use('meteorhubdotnet:firestorm-iron-router@1.0.10');
-  api.use('tinytest');
-  api.use('test-helpers');
-
-  api.addFiles('test/helpers.js');
-  api.addFiles('test/route_test.js');
-  api.addFiles('test/router_test.js');
-  api.addFiles('test/route_controller_test.js');
-});
